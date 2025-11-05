@@ -1,0 +1,682 @@
+[
+  {
+    "_id": 1,
+    "name": "Urban Oasis",
+    "type": "Apartment",
+    "rates": {
+      "monthly": 3200
+    },
+    "beds": 2,
+    "baths": 2,
+    "size": 1200,
+    "amenities": [
+      "City View",
+      "Swimming Pool",
+      "Air Conditioning",
+      "Smart TV",
+      "Fitness Center"
+    ],
+    "paymentOptions": "Monthly",
+    "location": {
+      "street": "123 Main Street",
+      "city": "Denver",
+      "state": "CO",
+      "zipcode": "80202"
+    },
+    "sellerInfo": {
+      "name": "Sarah Johnson",
+      "email": "sarah.johnson@email.com",
+      "phone": "3035550101"
+    },
+    "image": "a1.jpg",
+    "isFeatured": "true",
+    "createdAt": "2024-01-15T08:30:00Z",
+    "updatedAt": "2024-01-15T08:30:00Z"
+  },
+  {
+    "_id": 2,
+    "name": "Seaside Serenity",
+    "type": "Condo",
+    "rates": {
+      "monthly": 5100
+    },
+    "beds": 4,
+    "baths": 3,
+    "size": 2100,
+    "amenities": [
+      "Mountain View",
+      "Hiking trail access",
+      "Air conditioning",
+      "Smart TV",
+      "Outdoor grill/BBQ"
+    ],
+    "paymentOptions": "Monthly",
+    "location": {
+      "street": "321 Mount Road",
+      "city": "Aspen",
+      "state": "CO",
+      "zipcode": "81611"
+    },
+    "sellerInfo": {
+      "name": "Mathew",
+      "email": "mathew@gmail.com",
+      "phone": "0748596321"
+    },
+    "image": "a2.jpg",
+    "isFeatured": "false",
+    "createdAt": "2024-01-16T09:15:00Z",
+    "updatedAt": "2024-01-16T09:15:00Z"
+  },
+  {
+    "_id": 3,
+    "name": "Downtown Loft",
+    "type": "Loft",
+    "rates": {
+      "monthly": 2800
+    },
+    "beds": 1,
+    "baths": 1,
+    "size": 900,
+    "amenities": [
+      "City View",
+      "High Ceilings",
+      "Air Conditioning",
+      "Smart TV",
+      "Rooftop Access"
+    ],
+    "paymentOptions": "Monthly",
+    "location": {
+      "street": "456 Broadway",
+      "city": "New York",
+      "state": "NY",
+      "zipcode": "10001"
+    },
+    "sellerInfo": {
+      "name": "Michael Chen",
+      "email": "michael.chen@email.com",
+      "phone": "2125550202"
+    },
+    "image": "a3.jpg",
+    "isFeatured": "true",
+    "createdAt": "2024-01-17T10:20:00Z",
+    "updatedAt": "2024-01-17T10:20:00Z"
+  },
+  {
+    "_id": 4,
+    "name": "Garden Retreat",
+    "type": "House",
+    "rates": {
+      "monthly": 4200
+    },
+    "beds": 3,
+    "baths": 2,
+    "size": 1800,
+    "amenities": [
+      "Garden View",
+      "Private Yard",
+      "Air Conditioning",
+      "Smart TV",
+      "Patio"
+    ],
+    "paymentOptions": "Monthly",
+    "location": {
+      "street": "789 Oak Avenue",
+      "city": "Portland",
+      "state": "OR",
+      "zipcode": "97205"
+    },
+    "sellerInfo": {
+      "name": "Emily Wilson",
+      "email": "emily.wilson@email.com",
+      "phone": "5035550303"
+    },
+    "image": "a4.jpg",
+    "isFeatured": "false",
+    "createdAt": "2024-01-18T11:45:00Z",
+    "updatedAt": "2024-01-18T11:45:00Z"
+  },
+  {
+    "_id": 5,
+    "name": "Lakeside Haven",
+    "type": "Cabin",
+    "rates": {
+      "monthly": 3800
+    },
+    "beds": 2,
+    "baths": 1,
+    "size": 1100,
+    "amenities": [
+      "Lake View",
+      "Fishing Access",
+      "Fireplace",
+      "Smart TV",
+      "Kayak Rental"
+    ],
+    "paymentOptions": "Monthly",
+    "location": {
+      "street": "101 Lake Drive",
+      "city": "Lake Tahoe",
+      "state": "CA",
+      "zipcode": "96150"
+    },
+    "sellerInfo": {
+      "name": "Robert Davis",
+      "email": "robert.davis@email.com",
+      "phone": "5305550404"
+    },
+    "image": "b1.jpg",
+    "isFeatured": "true",
+    "createdAt": "2024-01-19T13:00:00Z",
+    "updatedAt": "2024-01-19T13:00:00Z"
+  },
+  {
+    "_id": 6,
+    "name": "Metropolitan Suite",
+    "type": "Apartment",
+    "rates": {
+      "monthly": 3500
+    },
+    "beds": 2,
+    "baths": 2,
+    "size": 1300,
+    "amenities": [
+      "City View",
+      "Concierge",
+      "Air Conditioning",
+      "Smart TV",
+      "Business Center"
+    ],
+    "paymentOptions": "Monthly",
+    "location": {
+      "street": "222 Park Avenue",
+      "city": "Chicago",
+      "state": "IL",
+      "zipcode": "60601"
+    },
+    "sellerInfo": {
+      "name": "Jennifer Martinez",
+      "email": "jennifer.martinez@email.com",
+      "phone": "3125550505"
+    },
+    "image": "b2.jpg",
+    "isFeatured": "false",
+    "createdAt": "2024-01-20T14:15:00Z",
+    "updatedAt": "2024-01-20T14:15:00Z"
+  },
+  {
+    "_id": 7,
+    "name": "Desert Bloom",
+    "type": "Villa",
+    "rates": {
+      "monthly": 6200
+    },
+    "beds": 4,
+    "baths": 3,
+    "size": 2400,
+    "amenities": [
+      "Desert View",
+      "Private Pool",
+      "Air Conditioning",
+      "Smart TV",
+      "Outdoor Kitchen"
+    ],
+    "paymentOptions": "Monthly",
+    "location": {
+      "street": "333 Canyon Road",
+      "city": "Phoenix",
+      "state": "AZ",
+      "zipcode": "85001"
+    },
+    "sellerInfo": {
+      "name": "David Thompson",
+      "email": "david.thompson@email.com",
+      "phone": "6025550606"
+    },
+    "image": "b3.jpg",
+    "isFeatured": "true",
+    "createdAt": "2024-01-21T15:30:00Z",
+    "updatedAt": "2024-01-21T15:30:00Z"
+  },
+  {
+    "_id": 8,
+    "name": "Historic Charm",
+    "type": "Townhouse",
+    "rates": {
+      "monthly": 2900
+    },
+    "beds": 2,
+    "baths": 1,
+    "size": 950,
+    "amenities": [
+      "Garden View",
+      "Original Hardwood",
+      "Air Conditioning",
+      "Smart TV",
+      "Private Entrance"
+    ],
+    "paymentOptions": "Monthly",
+    "location": {
+      "street": "444 Elm Street",
+      "city": "Boston",
+      "state": "MA",
+      "zipcode": "02101"
+    },
+    "sellerInfo": {
+      "name": "Amanda Roberts",
+      "email": "amanda.roberts@email.com",
+      "phone": "6175550707"
+    },
+    "image": "c1.jpg",
+    "isFeatured": "false",
+    "createdAt": "2024-01-22T16:45:00Z",
+    "updatedAt": "2024-01-22T16:45:00Z"
+  },
+  {
+    "_id": 9,
+    "name": "Skyline View",
+    "type": "Penthouse",
+    "rates": {
+      "monthly": 8900
+    },
+    "beds": 3,
+    "baths": 3,
+    "size": 2800,
+    "amenities": [
+      "Skyline View",
+      "Private Terrace",
+      "Air Conditioning",
+      "Smart TV",
+      "Wine Cooler"
+    ],
+    "paymentOptions": "Monthly",
+    "location": {
+      "street": "555 High Street",
+      "city": "San Francisco",
+      "state": "CA",
+      "zipcode": "94102"
+    },
+    "sellerInfo": {
+      "name": "Christopher Lee",
+      "email": "chris.lee@email.com",
+      "phone": "4155550808"
+    },
+    "image": "c2.jpg",
+    "isFeatured": "true",
+    "createdAt": "2024-01-23T17:00:00Z",
+    "updatedAt": "2024-01-23T17:00:00Z"
+  },
+  {
+    "_id": 10,
+    "name": "Cozy Cottage",
+    "type": "Cottage",
+    "rates": {
+      "monthly": 2200
+    },
+    "beds": 1,
+    "baths": 1,
+    "size": 700,
+    "amenities": [
+      "Garden View",
+      "Fireplace",
+      "Air Conditioning",
+      "Smart TV",
+      "Private Deck"
+    ],
+    "paymentOptions": "Monthly",
+    "location": {
+      "street": "666 Pine Lane",
+      "city": "Seattle",
+      "state": "WA",
+      "zipcode": "98101"
+    },
+    "sellerInfo": {
+      "name": "Jessica Brown",
+      "email": "jessica.brown@email.com",
+      "phone": "2065550909"
+    },
+    "image": "c3.jpg",
+    "isFeatured": "false",
+    "createdAt": "2024-01-24T18:15:00Z",
+    "updatedAt": "2024-01-24T18:15:00Z"
+  },
+  {
+    "_id": 11,
+    "name": "Modern Minimalist",
+    "type": "Apartment",
+    "rates": {
+      "monthly": 3100
+    },
+    "beds": 2,
+    "baths": 2,
+    "size": 1250,
+    "amenities": [
+      "City View",
+      "Minimalist Design",
+      "Air Conditioning",
+      "Smart TV",
+      "Yoga Studio"
+    ],
+    "paymentOptions": "Monthly",
+    "location": {
+      "street": "777 Design Street",
+      "city": "Austin",
+      "state": "TX",
+      "zipcode": "73301"
+    },
+    "sellerInfo": {
+      "name": "Daniel Kim",
+      "email": "daniel.kim@email.com",
+      "phone": "5125551010"
+    },
+    "image": "c4.jpg",
+    "isFeatured": "true",
+    "createdAt": "2024-01-25T19:30:00Z",
+    "updatedAt": "2024-01-25T19:30:00Z"
+  },
+  {
+    "_id": 12,
+    "name": "Mountain Escape",
+    "type": "Cabin",
+    "rates": {
+      "monthly": 2700
+    },
+    "beds": 2,
+    "baths": 1,
+    "size": 1000,
+    "amenities": [
+      "Mountain View",
+      "Hiking Trails",
+      "Wood Stove",
+      "Smart TV",
+      "Hot Tub"
+    ],
+    "paymentOptions": "Monthly",
+    "location": {
+      "street": "888 Summit Road",
+      "city": "Boulder",
+      "state": "CO",
+      "zipcode": "80301"
+    },
+    "sellerInfo": {
+      "name": "Rachel Green",
+      "email": "rachel.green@email.com",
+      "phone": "3035551111"
+    },
+    "image": "d1.jpg",
+    "isFeatured": "false",
+    "createdAt": "2024-01-26T20:45:00Z",
+    "updatedAt": "2024-01-26T20:45:00Z"
+  },
+  {
+    "_id": 13,
+    "name": "Urban Studio",
+    "type": "Studio",
+    "rates": {
+      "monthly": 1900
+    },
+    "beds": 1,
+    "baths": 1,
+    "size": 600,
+    "amenities": [
+      "City View",
+      "Compact Living",
+      "Air Conditioning",
+      "Smart TV",
+      "Roof Deck"
+    ],
+    "paymentOptions": "Monthly",
+    "location": {
+      "street": "999 Urban Avenue",
+      "city": "Miami",
+      "state": "FL",
+      "zipcode": "33101"
+    },
+    "sellerInfo": {
+      "name": "Carlos Rodriguez",
+      "email": "carlos.rodriguez@email.com",
+      "phone": "3055551212"
+    },
+    "image": "d2.jpg",
+    "isFeatured": "true",
+    "createdAt": "2024-01-27T21:00:00Z",
+    "updatedAt": "2024-01-27T21:00:00Z"
+  },
+  {
+    "_id": 14,
+    "name": "Beachfront Bliss",
+    "type": "Beach House",
+    "rates": {
+      "monthly": 5800
+    },
+    "beds": 3,
+    "baths": 2,
+    "size": 1600,
+    "amenities": [
+      "Ocean View",
+      "Beach Access",
+      "Air Conditioning",
+      "Smart TV",
+      "Outdoor Shower"
+    ],
+    "paymentOptions": "Monthly",
+    "location": {
+      "street": "111 Beach Road",
+      "city": "San Diego",
+      "state": "CA",
+      "zipcode": "92101"
+    },
+    "sellerInfo": {
+      "name": "Lisa Taylor",
+      "email": "lisa.taylor@email.com",
+      "phone": "6195551313"
+    },
+    "image": "e4.jpg",
+    "isFeatured": "false",
+    "createdAt": "2024-01-28T22:15:00Z",
+    "updatedAt": "2024-01-28T22:15:00Z"
+  },
+  {
+    "_id": 15,
+    "name": "Garden Apartment",
+    "type": "Apartment",
+    "rates": {
+      "monthly": 2400
+    },
+    "beds": 1,
+    "baths": 1,
+    "size": 800,
+    "amenities": [
+      "Garden View",
+      "Shared Courtyard",
+      "Air Conditioning",
+      "Smart TV",
+      "Community Garden"
+    ],
+    "paymentOptions": "Monthly",
+    "location": {
+      "street": "222 Garden Lane",
+      "city": "Portland",
+      "state": "OR",
+      "zipcode": "97206"
+    },
+    "sellerInfo": {
+      "name": "Thomas Wright",
+      "email": "thomas.wright@email.com",
+      "phone": "5035551414"
+    },
+    "image": "f1.jpg",
+    "isFeatured": "true",
+    "createdAt": "2024-01-29T23:30:00Z",
+    "updatedAt": "2024-01-29T23:30:00Z"
+  },
+  {
+    "_id": 16,
+    "name": "Executive Suite",
+    "type": "Apartment",
+    "rates": {
+      "monthly": 4500
+    },
+    "beds": 2,
+    "baths": 2,
+    "size": 1500,
+    "amenities": [
+      "City View",
+      "Executive Features",
+      "Air Conditioning",
+      "Smart TV",
+      "Private Parking"
+    ],
+    "paymentOptions": "Monthly",
+    "location": {
+      "street": "333 Corporate Drive",
+      "city": "Dallas",
+      "state": "TX",
+      "zipcode": "75201"
+    },
+    "sellerInfo": {
+      "name": "Kevin Harris",
+      "email": "kevin.harris@email.com",
+      "phone": "2145551515"
+    },
+    "image": "g1.jpg",
+    "isFeatured": "false",
+    "createdAt": "2024-01-30T08:45:00Z",
+    "updatedAt": "2024-01-30T08:45:00Z"
+  },
+  {
+    "_id": 17,
+    "name": "Riverside Retreat",
+    "type": "House",
+    "rates": {
+      "monthly": 3900
+    },
+    "beds": 3,
+    "baths": 2,
+    "size": 1700,
+    "amenities": [
+      "River View",
+      "Fishing Access",
+      "Air Conditioning",
+      "Smart TV",
+      "Kayak Storage"
+    ],
+    "paymentOptions": "Monthly",
+    "location": {
+      "street": "444 River Road",
+      "city": "Nashville",
+      "state": "TN",
+      "zipcode": "37201"
+    },
+    "sellerInfo": {
+      "name": "Michelle Clark",
+      "email": "michelle.clark@email.com",
+      "phone": "6155551616"
+    },
+    "image": "g4.jpg",
+    "isFeatured": "true",
+    "createdAt": "2024-01-31T09:00:00Z",
+    "updatedAt": "2024-01-31T09:00:00Z"
+  },
+  {
+    "_id": 18,
+    "name": "Artistic Loft",
+    "type": "Loft",
+    "rates": {
+      "monthly": 3300
+    },
+    "beds": 1,
+    "baths": 1,
+    "size": 1100,
+    "amenities": [
+      "City View",
+      "Art Studio",
+      "Air Conditioning",
+      "Smart TV",
+      "Exposed Brick"
+    ],
+    "paymentOptions": "Monthly",
+    "location": {
+      "street": "555 Arts District",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zipcode": "90001"
+    },
+    "sellerInfo": {
+      "name": "Alex Turner",
+      "email": "alex.turner@email.com",
+      "phone": "2135551717"
+    },
+    "image": "h2.jpg",
+    "isFeatured": "false",
+    "createdAt": "2024-02-01T10:15:00Z",
+    "updatedAt": "2024-02-01T10:15:00Z"
+  },
+  {
+    "_id": 19,
+    "name": "Family Home",
+    "type": "House",
+    "rates": {
+      "monthly": 4800
+    },
+    "beds": 4,
+    "baths": 3,
+    "size": 2200,
+    "amenities": [
+      "Suburban View",
+      "Playground",
+      "Air Conditioning",
+      "Smart TV",
+      "Backyard"
+    ],
+    "paymentOptions": "Monthly",
+    "location": {
+      "street": "666 Family Street",
+      "city": "Atlanta",
+      "state": "GA",
+      "zipcode": "30301"
+    },
+    "sellerInfo": {
+      "name": "Brian Scott",
+      "email": "brian.scott@email.com",
+      "phone": "4045551818"
+    },
+    "image": "j1.jpg",
+    "isFeatured": "true",
+    "createdAt": "2024-02-02T11:30:00Z",
+    "updatedAt": "2024-02-02T11:30:00Z"
+  },
+  {
+    "_id": 20,
+    "name": "City Center Apartment",
+    "type": "Apartment",
+    "rates": {
+      "monthly": 3700
+    },
+    "beds": 2,
+    "baths": 2,
+    "size": 1400,
+    "amenities": [
+      "City View",
+      "Central Location",
+      "Air Conditioning",
+      "Smart TV",
+      "Gym Access"
+    ],
+    "paymentOptions": "Monthly",
+    "location": {
+      "street": "777 Central Avenue",
+      "city": "Philadelphia",
+      "state": "PA",
+      "zipcode": "19101"
+    },
+    "sellerInfo": {
+      "name": "Nicole Adams",
+      "email": "nicole.adams@email.com",
+      "phone": "2155551919"
+    },
+    "image": "j3.jpg",
+    "isFeatured": "false",
+    "createdAt": "2024-02-03T12:45:00Z",
+    "updatedAt": "2024-02-03T12:45:00Z"
+  }
+]

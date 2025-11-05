@@ -10,7 +10,7 @@ import { FaGoogle } from "react-icons/fa6";
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false) // Simulated login state
 
   const pathname = usePathname();
 
@@ -55,7 +55,7 @@ const Navbar = () => {
 
           {/* Logo and links */}
           <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
-            <Link href="/" className="flex flex-shrink-0 items-center">
+            <Link href="/" className="flex shrink-0 items-center">
               <Image
                 className="h-10 w-auto"
                 src={logoWhite}
