@@ -1,18 +1,32 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import profileDefault from "../assets/images/profile.png";
 import logoWhite from "../assets/images/logo-white.png";
 import { FaGoogle } from "react-icons/fa6";
+import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 
 const Navbar = () => {
+  const { data: session } = useSession();
+
+  const profileImage = session?.user?.image;
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false) // Simulated login state
+  const [providers, setproviders] = useState(null); // Simulated login state
 
   const pathname = usePathname();
+
+  useEffect(() => {
+    const setAuthProviders = async () => {
+      const response = await getProviders();
+      setproviders(response);
+    };
+    setAuthProviders();
+  }, []);
+  console.log(providers);
 
   return (
     <nav className="bg-blue-700 border-b border-blue-500">
@@ -33,7 +47,11 @@ const Navbar = () => {
                   strokeWidth="1.5"
                   stroke="currentColor"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               ) : (
                 <svg
@@ -72,136 +90,177 @@ const Navbar = () => {
               <div className="flex space-x-2">
                 <Link
                   href="/"
-                  className={`${pathname === "/" ? "bg-black" : ""} text-white  hover:bg-gray-900 rounded-md px-3 py-2`}
+                  className={`${
+                    pathname === "/" ? "bg-black" : ""
+                  } text-white  hover:bg-gray-900 rounded-md px-3 py-2`}
                 >
                   Home
                 </Link>
                 <Link
                   href="/properties"
-                  className={`${pathname === "/properties" ? "bg-black" : ""} text-white  hover:bg-gray-900 rounded-md px-3 py-2`}
+                  className={`${
+                    pathname === "/properties" ? "bg-black" : ""
+                  } text-white  hover:bg-gray-900 rounded-md px-3 py-2`}
                 >
                   Properties
                 </Link>
-                {isLoggedIn && (
+                {session && (
                   <Link
-                  href="/add-property"
-                  className={`${pathname === "/add-property" ? "bg-black" : ""} text-white  hover:bg-gray-900 rounded-md px-3 py-2`}
-                >
-                  Add Property
-                </Link>
+                    href="/add-property"
+                    className={`${
+                      pathname === "/add-property" ? "bg-black" : ""
+                    } text-white  hover:bg-gray-900 rounded-md px-3 py-2`}
+                  >
+                    Add Property
+                  </Link>
                 )}
               </div>
             </div>
           </div>
-          {!isLoggedIn && (
-              <button className="flex items-center text-white bg-gray-700 hover:bg-gray-900 rounded-md px-3 py-2">
-              <FaGoogle className="mr-2 text-white" />
-              <span>Login / Register</span>
-            </button>
-            )}  
-            
-            {isLoggedIn && (
-              <div className="hidden md:flex items-center space-x-4">   
-            {/* Notifications */}
-            <button
-              type="button"
-              className="relative rounded-full bg-gray-800 p-1 text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-            >
-              <span className="sr-only">View notifications</span>
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
-                />
-              </svg>
-              <span className="absolute top-0 right-0 inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-bold text-white transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
-                2
-              </span>
-            </button>
 
-            {/* Profile dropdown */}
-            <div className="relative">
+          {!session && (
+            <div className="hidden md:flex items-center">
+              {providers &&
+                Object.values(providers).map((provider, index) => (
+                  <button
+                    onClick={() => signIn(provider.id)}
+                    key={index}
+                    className="flex items-center text-white bg-gray-700 hover:bg-gray-900 rounded-md px-3 py-2"
+                  >
+                    <FaGoogle className="mr-2 text-white" />
+                    <span>Login / Register</span>
+                  </button>
+                ))}
+            </div>
+          )}
+
+          {session && (
+            <div className="hidden md:flex items-center space-x-4">
+              {/* Notifications */}
               <button
-                onClick={() => setUserMenuOpen(!userMenuOpen)}
-                className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white"
+                type="button"
+                className="relative rounded-full bg-gray-800 p-1 text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
               >
-                <span className="sr-only">Open user menu</span>
-                <Image
-                  className="h-8 w-8 rounded-full"
-                  src={profileDefault}
-                  alt="User Profile"
-                />
+                <span className="sr-only">View notifications</span>
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+                  />
+                </svg>
+                <span className="absolute top-0 right-0 inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-bold text-white transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
+                  2
+                </span>
               </button>
 
-              {userMenuOpen && (
-                <div
-                  className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5"
+              {/* Profile dropdown */}
+              <div className="relative">
+                <button
+                  onClick={() => setUserMenuOpen(!userMenuOpen)}
+                  className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white"
                 >
-                  <Link
-                    href="/profile"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    Your Profile
-                  </Link>
-                  <Link
-                    href="/saved-properties"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    Saved Properties
-                  </Link>
-                  <button
-                    className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    Sign Out
-                  </button>
-                </div>
-              )}
+                  <span className="sr-only">Open user menu</span>
+                  <Image
+                    className="h-8 w-8 rounded-full"
+                    src={profileImage || profileDefault}
+                    alt=""
+                    width={40}
+                    height={40}
+                  />
+                </button>
+
+                {userMenuOpen && (
+                  <div className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5">
+                    <Link
+                      href="/profile"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      onClick={() => {
+                        setMobileMenuOpen(false)
+                      }}
+                    >
+                      Your Profile
+                    </Link>
+                    <Link
+                      href="/saved-properties"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      onClick={() => {
+                        setMobileMenuOpen(false)
+                      }}
+                    >
+                      Saved Properties
+                    </Link>
+                    <button
+                    onClick={() => {
+                      setMobileMenuOpen(false)
+                      signOut();
+                    }} 
+                    className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Sign Out
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-            )}
+          )}
           {/* Right side buttons */}
-          
         </div>
       </div>
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div id="mobile-menu" className="md:hidden bg-blue-600 px-2 pb-3 space-y-1">
+        <div
+          id="mobile-menu"
+          className="md:hidden bg-blue-600 px-2 pb-3 space-y-1"
+        >
           <Link
             href="/"
-            className={`${pathname === "/" ? "bg-black" : ""} block text-white rounded-md px-3 py-2 text-base font-medium`}
+            className={`${
+              pathname === "/" ? "bg-black" : ""
+            } block text-white rounded-md px-3 py-2 text-base font-medium`}
           >
             Home
           </Link>
           <Link
             href="/properties"
-            className={`${pathname === "/properties" ? "bg-black" : ""} block text-white rounded-md px-3 py-2 text-base font-medium`}
+            className={`${
+              pathname === "/properties" ? "bg-black" : ""
+            } block text-white rounded-md px-3 py-2 text-base font-medium`}
           >
             Properties
           </Link>
-          {isLoggedIn && (
+          {session && (
             <Link
-            href="/add-property"
-            className={`${pathname === "/add-property" ? "bg-black" : ""} block text-white rounded-md px-3 py-2 text-base font-medium`}
-          >
-            Add Property
-          </Link>
-          )}
-           
-          {!isLoggedIn && (
-            <button className="flex items-center w-full text-white bg-gray-700 hover:bg-gray-900 rounded-md px-3 py-2">
-            <i className="fa-brands fa-google mr-2"></i>
-            <span>Login / Register</span>
-          </button>
+              href="/add-property"
+              className={`${
+                pathname === "/add-property" ? "bg-black" : ""
+              } block text-white rounded-md px-3 py-2 text-base font-medium`}
+            >
+              Add Property
+            </Link>
           )}
 
+          {!session && (
+            <div>
+              {providers &&
+                Object.values(providers).map((provider, index) => (
+                  <button
+                    key={index}
+                    onClick={() => signIn(provider.id)}
+                    className="flex items-center w-full text-white bg-gray-700 hover:bg-gray-900 rounded-md px-3 py-2"
+                  >
+                    <i className="fa-brands fa-google mr-2"></i>
+                    <span>Login / Register</span>
+                  </button>
+                ))}
+            </div>
+          )}
         </div>
       )}
     </nav>
