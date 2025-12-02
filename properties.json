@@ -28,7 +28,9 @@
       "email": "sarah.johnson@email.com",
       "phone": "3035550101"
     },
-    "image": "a1.jpg",
+    "images":[
+      "a1.jpg"
+    ] ,
     "isFeatured": "true",
     "createdAt": "2024-01-15T08:30:00Z",
     "updatedAt": "2024-01-15T08:30:00Z"
@@ -62,7 +64,9 @@
       "email": "mathew@gmail.com",
       "phone": "0748596321"
     },
-    "image": "a2.jpg",
+    "images":[
+      "a2.jpg"
+    ] ,
     "isFeatured": "false",
     "createdAt": "2024-01-16T09:15:00Z",
     "updatedAt": "2024-01-16T09:15:00Z"
@@ -96,7 +100,9 @@
       "email": "michael.chen@email.com",
       "phone": "2125550202"
     },
-    "image": "a3.jpg",
+    "images":[
+      "a3.jpg"
+    ] ,
     "isFeatured": "true",
     "createdAt": "2024-01-17T10:20:00Z",
     "updatedAt": "2024-01-17T10:20:00Z"
@@ -130,7 +136,9 @@
       "email": "emily.wilson@email.com",
       "phone": "5035550303"
     },
-    "image": "a4.jpg",
+    "images":[
+      "a4.jpg"
+    ] ,
     "isFeatured": "false",
     "createdAt": "2024-01-18T11:45:00Z",
     "updatedAt": "2024-01-18T11:45:00Z"
@@ -164,7 +172,9 @@
       "email": "robert.davis@email.com",
       "phone": "5305550404"
     },
-    "image": "b1.jpg",
+    "images":[
+      "b1.jpg"
+    ] ,
     "isFeatured": "true",
     "createdAt": "2024-01-19T13:00:00Z",
     "updatedAt": "2024-01-19T13:00:00Z"
@@ -198,7 +208,9 @@
       "email": "jennifer.martinez@email.com",
       "phone": "3125550505"
     },
-    "image": "b2.jpg",
+    "images":[
+      "b2.jpg"
+    ] ,
     "isFeatured": "false",
     "createdAt": "2024-01-20T14:15:00Z",
     "updatedAt": "2024-01-20T14:15:00Z"
@@ -232,7 +244,9 @@
       "email": "david.thompson@email.com",
       "phone": "6025550606"
     },
-    "image": "b3.jpg",
+    "images":[
+      "b3.jpg"
+    ] ,
     "isFeatured": "true",
     "createdAt": "2024-01-21T15:30:00Z",
     "updatedAt": "2024-01-21T15:30:00Z"
@@ -266,7 +280,9 @@
       "email": "amanda.roberts@email.com",
       "phone": "6175550707"
     },
-    "image": "c1.jpg",
+    "images":[
+      "c1.jpg"
+    ] ,
     "isFeatured": "false",
     "createdAt": "2024-01-22T16:45:00Z",
     "updatedAt": "2024-01-22T16:45:00Z"
@@ -300,7 +316,9 @@
       "email": "chris.lee@email.com",
       "phone": "4155550808"
     },
-    "image": "c2.jpg",
+    "images":[
+      "c2.jpg"
+    ] ,
     "isFeatured": "true",
     "createdAt": "2024-01-23T17:00:00Z",
     "updatedAt": "2024-01-23T17:00:00Z"
@@ -334,7 +352,9 @@
       "email": "jessica.brown@email.com",
       "phone": "2065550909"
     },
-    "image": "c3.jpg",
+    "images":[
+      "c3.jpg"
+    ] ,
     "isFeatured": "false",
     "createdAt": "2024-01-24T18:15:00Z",
     "updatedAt": "2024-01-24T18:15:00Z"
@@ -368,7 +388,9 @@
       "email": "daniel.kim@email.com",
       "phone": "5125551010"
     },
-    "image": "c4.jpg",
+    "images":[
+      "c4.jpg"
+    ] ,
     "isFeatured": "true",
     "createdAt": "2024-01-25T19:30:00Z",
     "updatedAt": "2024-01-25T19:30:00Z"
@@ -402,7 +424,9 @@
       "email": "rachel.green@email.com",
       "phone": "3035551111"
     },
-    "image": "d1.jpg",
+    "images":[
+      "d1.jpg"
+    ] ,
     "isFeatured": "false",
     "createdAt": "2024-01-26T20:45:00Z",
     "updatedAt": "2024-01-26T20:45:00Z"
@@ -436,7 +460,9 @@
       "email": "carlos.rodriguez@email.com",
       "phone": "3055551212"
     },
-    "image": "d2.jpg",
+    "images":[
+      "d2.jpg"
+    ] ,
     "isFeatured": "true",
     "createdAt": "2024-01-27T21:00:00Z",
     "updatedAt": "2024-01-27T21:00:00Z"
@@ -470,7 +496,9 @@
       "email": "lisa.taylor@email.com",
       "phone": "6195551313"
     },
-    "image": "e4.jpg",
+    "images":[
+      "e4.jpg"
+    ] ,
     "isFeatured": "false",
     "createdAt": "2024-01-28T22:15:00Z",
     "updatedAt": "2024-01-28T22:15:00Z"
@@ -504,7 +532,9 @@
       "email": "thomas.wright@email.com",
       "phone": "5035551414"
     },
-    "image": "f1.jpg",
+    "images":[
+      "f1.jpg"
+    ] ,
     "isFeatured": "true",
     "createdAt": "2024-01-29T23:30:00Z",
     "updatedAt": "2024-01-29T23:30:00Z"
@@ -538,7 +568,9 @@
       "email": "kevin.harris@email.com",
       "phone": "2145551515"
     },
-    "image": "g1.jpg",
+    "images":[
+      "g1.jpg"
+    ] ,
     "isFeatured": "false",
     "createdAt": "2024-01-30T08:45:00Z",
     "updatedAt": "2024-01-30T08:45:00Z"
@@ -572,7 +604,9 @@
       "email": "michelle.clark@email.com",
       "phone": "6155551616"
     },
-    "image": "g4.jpg",
+    "images":[
+      "g4.jpg"
+    ] ,
     "isFeatured": "true",
     "createdAt": "2024-01-31T09:00:00Z",
     "updatedAt": "2024-01-31T09:00:00Z"
@@ -606,7 +640,9 @@
       "email": "alex.turner@email.com",
       "phone": "2135551717"
     },
-    "image": "h2.jpg",
+    "images":[
+      "h2.jpg"
+    ] ,
     "isFeatured": "false",
     "createdAt": "2024-02-01T10:15:00Z",
     "updatedAt": "2024-02-01T10:15:00Z"
@@ -640,7 +676,9 @@
       "email": "brian.scott@email.com",
       "phone": "4045551818"
     },
-    "image": "j1.jpg",
+    "images":[
+      "j1.jpg"
+    ] ,
     "isFeatured": "true",
     "createdAt": "2024-02-02T11:30:00Z",
     "updatedAt": "2024-02-02T11:30:00Z"
@@ -674,7 +712,9 @@
       "email": "nicole.adams@email.com",
       "phone": "2155551919"
     },
-    "image": "j3.jpg",
+    "images":[
+      "j3.jpg"
+    ] ,
     "isFeatured": "false",
     "createdAt": "2024-02-03T12:45:00Z",
     "updatedAt": "2024-02-03T12:45:00Z"

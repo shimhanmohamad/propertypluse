@@ -74,9 +74,11 @@ const PropertySchema = new Schema(
         type: String,
       },
     },
-    image: {
-      type: String,
-    },
+    images: [
+      {
+        type: String,
+      },
+    ],
     is_featured: {
       type: Boolean,
       default: false,
