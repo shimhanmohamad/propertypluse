@@ -2,6 +2,8 @@ import "@/app/assets/styles/globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import  AuthProvider  from "../app/components/AuthProvider";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const metadata = {
   title: "Property Pulse | Find the perfect place",
@@ -19,6 +21,7 @@ export default function MainLayout({ children }) {
           <Navbar />
           <main>{children}</main>
           <Footer />
+          <ToastContainer position="top-right" autoClose={3000} /> 
         </body>
       </html>
     </AuthProvider>

@@ -4,16 +4,16 @@ import { getSessionUser } from "../../../utils/getSessionUser";
 import cloudinary from "../../../config/cloudinary";
 
 
-export const GET = async (request) => {
-  try {
-    await connectDB();
-    const properties = await Property.find({});
-    return new Response(JSON.stringify(properties), { status: 200 });
-  } catch (error) {
-    console.log(error);
-    return new Response("Somthing went Wrong", { status: 500 });
-  }
-};
+  export const GET = async (request) => {
+    try {
+      await connectDB();
+      const properties = await Property.find({});
+      return new Response(JSON.stringify(properties), { status: 200 });
+    } catch (error) {
+      console.log(error);
+      return new Response("Somthing went Wrong", { status: 500 });
+    }
+  };
 
 export const POST = async (request) => {
   try {
